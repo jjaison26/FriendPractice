@@ -34,6 +34,12 @@ Rectangle scale(Rectangle rectangle, int factor)
   return Rectangle(width, height);
 }
 
+Rectangle swap(Rectangle r) {
+    int width = r.get_height();
+    int height = r.get_width();
+    return Rectangle(width, height);
+}
+
 int main()
 {
   Rectangle r1(2, 3);
@@ -41,5 +47,9 @@ int main()
 
   Rectangle r2 = scale(r1, 2);
   cout << "Area of Rectangle 2: " << r2.area() << endl;
+  Rectangle r3 = swap(r1);
+  cout << "Width of Rectangle 3: " << r3.get_width() << endl;
+  cout << "Height of Rectangle 3: " << r3.get_height() << endl;
   return 0;
+  
 }
